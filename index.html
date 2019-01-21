@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>MR PORTER Size Guide</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<!-- To stop pound signs showing up like weird characters -->
+	<link id='favicon' rel="icon" href="./images/favicon-classic.png?ver=1">
+	<!-- <link id='favicon' rel="icon" href="./images/favicon-classic.png?ver=1"> -->
+	<!-- <link id='favicon' rel="icon" href="./images/favicon-mrporter.png?ver=1"> -->
+	<!-- <link id='favicon' rel="icon" href="./images/favicon-v1-mrp.png?ver=1"> -->
+	<!-- <link id='favicon' rel="icon" href="./images/favicon-v2-mrp.png?ver=1"> -->
+</head>
+
+<body>
+	click then look at the favicon ^
+	<div class='favicon-selector' id='classic'><a href='#'>classic</a></div>
+	<div class='favicon-selector' id='mrporter'><a href='#'>mrporter</a></div>
+	<div class='favicon-selector' id='v1-mrp'><a href='#'>v1-mrp</a></div>
+	<div class='favicon-selector' id='v2-mrp'><a href='#'>v2-mrp</a></div>
+
+	<script>
+		function changeFavicon(element) {
+			document.getElementById('favicon').setAttribute('href', `./images/favicon-${element.target.innerText}.png?ver=1`)
+		}
+
+		[].forEach.call(document.getElementsByClassName('favicon-selector'), (element) => {
+			element.addEventListener('click', (element) => {
+				changeFavicon(element);
+			});
+		});
+
+	</script>
+</body>
+
+</html>
